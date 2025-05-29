@@ -64,18 +64,17 @@ public static void retoEscaleraFinal() {
             continue;
         }
 
-        System.out.print("1 "); // Siempre empieza con 1
+        System.out.print("1 ");
 
-        int num1 = fila + 1;        // segundo número (crece: 3, 4, 5…)
-        int num2 = num1 + (fila - 2); // siguiente (suma creciente)
-        int descendente = num2 - 2;  // valor descendente para penúltimo
+        int num1 = fila + 1;
+        int num2 = num1 + (fila - 2);
+        int descendente = num2 - 2;
 
         System.out.print(num1 + " ");
 
-        // Si hay más de 3 columnas, se imprimen los del medio
         for (int i = 3; i < fila; i++) {
             System.out.print(num2 + " ");
-            // Actualiza para la siguiente sumatoria
+
             num2 += (fila - 2);
         }
 
@@ -83,7 +82,7 @@ public static void retoEscaleraFinal() {
             System.out.print(descendente + " ");
         }
 
-        System.out.println("2"); // Siempre termina con 2
+        System.out.println("2");
     }
 }
 }

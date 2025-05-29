@@ -11,7 +11,7 @@ public class App {
         while (continuar) {
             System.out.print("\nIngrese número de reto (o 0 para salir): ");
             int opcion = lecturaDatos.nextInt();
-            lecturaDatos.nextLine(); // Limpiar salto de línea
+            lecturaDatos.nextLine();
 
             if (opcion == 0) {
                 System.out.println("Programa finalizado por el usuario.");
@@ -51,13 +51,42 @@ public class App {
                     System.out.println("Reto 39: escalera avanzada");
                     RetosFiguras.GestorPkgFiguras.retoEscaleraFinal();
                     break;
+                case 44:
+                    System.out.println("Reto 44: eliminar letra de una frase");
+                    RetosCadenas.GestorPkgCadenas.retoEliminarLetra();
+                    break;
+                case 49:
+                    System.out.println("Reto 49: cambiar letras de una frase");
+                    RetosCadenas.GestorPkgCadenas.retoCambiarLetras();
+                    break;
+                case 54:
+                    System.out.println ("Reto 54: matriz cuadrada con nombres");
+                    RetosArray.GestorPkgArray.retoMatrizCuadrada();
+                    break;
+                case 59:
+                    System.out.println ("Reto 59: loadings de retos");
+                    RetosLoading.GestorPkgLoading.main(args);
+                    break;
+                case 64:
+                    System.out.println("Reto 64: spinner de escalones");
+                    RetosLoading.GestorPkgLoading.retoSpinner();
+                    break;
+                case 69:
+                    System.out.println ("Reto 69: multiplicación recursiva");
+                    RetosRecursividad.GestorPkgRecurs.retoMultiplicacionRecursiva();
+                    break;
+                case 74:
+                    System.out.println("Reto 74: conteo progresivo hasta");
+                    RetosRecursividad.GestorPkgRecurs.conteoProgresivoHasta();
+                    break;
+
                 default:
                     System.out.println("Opción no válida. Intente nuevamente.");
             }
 
-            System.out.print("\n¿Desea ejecutar otro reto? (s/n): ");
+            System.out.print("\n¿Desea ejecutar otro reto? (si/no): ");
             String respuesta = lecturaDatos.nextLine();
-            if (!respuesta.equalsIgnoreCase("s")) {
+            if (!respuesta.equalsIgnoreCase("si")) {
                 continuar = false;
                 System.out.println("Programa finalizado.");
             }
